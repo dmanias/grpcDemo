@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package gr.dmanias.grpc;
+
+// The greeting service definition
+service GreetingService {
+  // Sends a greeting
+  rpc Greet(GreetingRequest) returns (GreetingResponse) {}
+}
+
+// The request message containing the user's name
+message GreetingRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message GreetingResponse {
+  string message = 1;
+}
