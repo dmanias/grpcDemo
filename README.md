@@ -24,6 +24,7 @@ To run the server application, navigate to the `grpc-server` directory and use t
 
 ```bash
 mvn spring-boot:run
+```
 
 ### Client
 
@@ -31,6 +32,7 @@ To run the client application, navigate to the grpc-client directory and use the
 
 ```bash
 mvn spring-boot:run
+```
 
 ### gRPC Services
 
