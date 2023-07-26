@@ -24,3 +24,28 @@ To run the server application, navigate to the `grpc-server` directory and use t
 
 ```bash
 mvn spring-boot:run
+
+### Client
+
+To run the client application, navigate to the grpc-client directory and use the following command:
+
+```bash
+mvn spring-boot:run
+
+### gRPC Services
+
+The gRPC services are defined in the .proto files located in the src/main/proto directory of the respective modules.
+
+### Contribution
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+### License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+### Support
+
+If you like this project, don't forget to give it a ⭐️
