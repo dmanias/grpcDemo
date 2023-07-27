@@ -2,6 +2,7 @@ package gr.dmanias.grpc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import java.io.IOException;
 
@@ -9,10 +10,10 @@ import java.io.IOException;
 public class GrpcApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GrpcApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(GrpcApplication.class, args);
 
 		try {
-			GrpcServer grpcServer = new GrpcServer();
+			GrpcServer grpcServer = context.getBean(GrpcServer.class);
 			grpcServer.start();
 			grpcServer.blockUntilShutdown();
 		} catch (IOException | InterruptedException e) {

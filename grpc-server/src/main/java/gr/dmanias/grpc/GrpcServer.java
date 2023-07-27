@@ -11,11 +11,17 @@ public class GrpcServer {
 
     private Server server;
 
+    private final GreetingServiceImpl greetingService;
+
+    public GrpcServer(GreetingServiceImpl greetingService) {
+        this.greetingService = greetingService;
+    }
+
     public void start() throws IOException {
         /* The port on which the server should run */
         int port = 50051;
         server = ServerBuilder.forPort(port)
-                .addService(new GreetingServiceImpl())
+                .addService(greetingService) // use the injected instance
                 .build()
                 .start();
 
