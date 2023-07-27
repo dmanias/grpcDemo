@@ -1,4 +1,4 @@
-# gRPC with Spring Boot
+# gRPC with Spring Boot and Elasticsearch
 
 This project is a demonstration of using gRPC with Spring Boot. The project includes both a server module and a client module.
 
