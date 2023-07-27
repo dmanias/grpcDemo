@@ -1,12 +1,12 @@
 # gRPC with Spring Boot and Elasticsearch
 
-This project is a demonstration of using gRPC with Spring Boot. The project includes both a server module and a client module.
+This project is a demonstration of using gRPC with Spring Boot and includes logging of request and response with Elasticsearch. The project includes a server module, a client module, and Elasticsearch setup for logging.
 
 ## Prerequisites
 
 - Java 17
 - Maven
-- Elasticsearch 7.14 or higher
+- Elasticsearch 7.14 or higher installed on your local system or accessible via network.The necessary Elasticsearch dependencies added in the server-side application.
 - An IDE (e.g., IntelliJ IDEA)
 
 ## Project Structure
@@ -18,6 +18,10 @@ This project is divided into two modules:
 2. **grpc-client** - This module handles all client-side operations, and contains a simple Spring Boot application which consumes the gRPC service.
 
 ## Running the Project
+
+1. Ensure Elasticsearch is running.
+2. Start the server application. Each gRPC request will be logged into Elasticsearch.
+3. Use Kibana or the Elasticsearch API to view and query the logged data.
 
 ### Server
 
